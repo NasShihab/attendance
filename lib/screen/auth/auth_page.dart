@@ -14,6 +14,7 @@ class AuthPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 60.w),
@@ -53,7 +54,7 @@ class AuthPage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Icon(
-                              CupertinoIcons.profile_circled,
+                              Icons.person_outline,
                               color: Colors.white,
                               size: 50.sp,
                             ),
@@ -78,7 +79,7 @@ class AuthPage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Icon(
-                              CupertinoIcons.profile_circled,
+                              Icons.person,
                               color: Colors.white,
                               size: 50.sp,
                             ),
@@ -100,7 +101,7 @@ class AuthPage extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      context.go('/${GoRoutSingleton().loginPage}');
+                      context.push('/${GoRoutSingleton().loginPage}');
                     },
                     child: const Text('Sign In'),
                   ),
@@ -110,7 +111,7 @@ class AuthPage extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      context.go('/${GoRoutSingleton().loginPage}');
+                      context.push('/${GoRoutSingleton().loginPage}');
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
