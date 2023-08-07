@@ -7,5 +7,7 @@ class GoRoutSingleton {
 
   GoRoutSingleton._internal();
   String? homePage;
-  String? welcomePage;
+  String? splashScreen;
+  String? authPage;
+  String? authPage2;
 }

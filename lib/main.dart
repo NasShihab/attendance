@@ -1,4 +1,4 @@
-import 'package:attendance/go_router/go_router.dart';
+
 import 'package:attendance/theme_data/theme_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -19,7 +19,10 @@ class MyApp extends StatelessWidget {
         theme: lightThemeData(),
         darkTheme: darkThemeData(),
         themeMode: ThemeMode.system,
-        routerConfig: router,
+        // routerDelegate: router.routerDelegate,
+        // routeInformationParser: router.routeInformationParser,
+        // routeInformationProvider: router.routeInformationProvider,
+
       ),
     );
   }

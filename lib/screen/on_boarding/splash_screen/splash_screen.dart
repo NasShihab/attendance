@@ -1,18 +1,32 @@
-import 'package:attendance/custom_property/height_weight_spacing.dart';
-import 'package:attendance/theme_data/text_theme.dart';
+import 'dart:async';
+import 'package:attendance/go_router/go_rout_singleton.dart';
+import 'package:attendance/screen/auth/auth_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../custom_property/color/custom_colors.dart';
+import '../../../custom_property/height_weight_spacing.dart';
+import '../../../theme_data/text_theme.dart';
 
-import '../../custom_property/color/custom_colors.dart';
-import '../../go_router/go_rout_singleton.dart';
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
 
-class WelcomePage extends StatelessWidget {
-  const WelcomePage({super.key});
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(const Duration(seconds: 2), () {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const AuthPage()));
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    GoRoutSingleton().welcomePage = 'welcomePage';
-
+    GoRoutSingleton().splashScreen = 'splashScreen';
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 60.w),
@@ -33,13 +47,10 @@ class WelcomePage extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                   shadows: [
                     Shadow(
-                      offset: Offset(-4, -2),
-                      color: Colors.black.withOpacity(.3),
-                      blurRadius: 4
-                    ),
-
+                        offset: const Offset(-4, -2),
+                        color: Colors.black.withOpacity(.3),
+                        blurRadius: 4),
                   ],
-
                 ),
               ),
               height60(),
@@ -48,7 +59,8 @@ class WelcomePage extends StatelessWidget {
                 style: bodyLarge(context)?.copyWith(
                     color: primeColor(context), fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
-              )
+              ),
+
             ],
           ),
         ),
