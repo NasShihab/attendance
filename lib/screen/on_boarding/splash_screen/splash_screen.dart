@@ -19,14 +19,12 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-      // context.go('/auth');
       context.go('/${GoRoutSingleton().authPage}');
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    GoRoutSingleton().splashScreen = 'splashScreen';
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 60.w),
