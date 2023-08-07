@@ -13,6 +13,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text(
           'Welcome Back',
@@ -22,7 +23,7 @@ class LoginPage extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 30.w),
-          child: Column(
+          child: ListView(
             children: [
               Center(
                 child: Image.asset(
@@ -116,6 +117,29 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+              height20(),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton.icon(
+                  onPressed: () {},
+                  icon: Image.asset(
+                    ImageCore().googleIcon,
+                    height: 24.sp,
+                    width: 24.sp,
+                  ),
+                  label: Text(
+                    'Continue with Google',
+                    style: bodyMedium(context),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    elevation: 1,
+                    side: const BorderSide(
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
               )
             ],
           ),
