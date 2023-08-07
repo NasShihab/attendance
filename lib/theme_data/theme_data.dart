@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../core/color/custom_colors.dart';
+
 ThemeData lightThemeData() => ThemeData(
       useMaterial3: true,
       fontFamily: 'Roboto',
       brightness: Brightness.light,
       primaryColor: const Color(0xff28C76F),
+      canvasColor: const Color(0xff00D179),
       primaryColorDark: Colors.white.withOpacity(.3),
 
       textTheme: TextTheme(
@@ -33,20 +36,19 @@ ThemeData lightThemeData() => ThemeData(
       iconTheme: IconThemeData(color: Colors.red, size: 24.sp),
       //
       elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.red),
-          foregroundColor: MaterialStateProperty.all(Colors.white),
-          padding: MaterialStateProperty.all(
-            EdgeInsets.symmetric(vertical: 0.h, horizontal: 0.w),
-          ),
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.r)),
-          ),
-        ),
+        style: ElevatedButton.styleFrom(
+            backgroundColor: myPrimeColor,
+            foregroundColor: Colors.white,
+            padding: EdgeInsets.symmetric(vertical: 0.h, horizontal: 0.w),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.r),
+            ),
+            elevation: 5,
+            textStyle: GoogleFonts.roboto(fontSize: 19.sp)),
       ),
       // AppBar
       appBarTheme: AppBarTheme(
-        centerTitle: false,
+        centerTitle: true,
         elevation: 0,
         backgroundColor: Colors.transparent,
         titleTextStyle: GoogleFonts.roboto(
@@ -61,7 +63,9 @@ ThemeData lightThemeData() => ThemeData(
       ),
       tabBarTheme: const TabBarTheme(labelColor: Colors.red),
       radioTheme: RadioThemeData(
-          fillColor: MaterialStateProperty.all<Color?>(Colors.red)),
+        fillColor: MaterialStateProperty.all<Color?>(Colors.red),
+      ),
+
       //
     );
 
@@ -69,10 +73,14 @@ ThemeData darkThemeData() => ThemeData(
       useMaterial3: true,
       fontFamily: 'Roboto',
       brightness: Brightness.dark,
-      primaryColor: const Color(0xff28C76F),
+      // primaryColor: const Color(0xff28C76F),
+      primaryColor: lightThemeData().primaryColor,
+      canvasColor: lightThemeData().canvasColor,
       primaryColorDark: Colors.black.withOpacity(.3),
 
       textTheme: TextTheme(
+        // displayLarge: GoogleFonts.roboto(
+        //     fontSize: 50.sp, fontWeight: FontWeight.bold, color: Colors.white),
         displayLarge: GoogleFonts.roboto(
             fontSize: 50.sp, fontWeight: FontWeight.bold, color: Colors.white),
         displayMedium: GoogleFonts.roboto(
@@ -83,28 +91,28 @@ ThemeData darkThemeData() => ThemeData(
         bodyMedium: GoogleFonts.roboto(fontSize: 18.sp),
         bodySmall: GoogleFonts.roboto(fontSize: 15.sp),
         //title
-        titleLarge: GoogleFonts.roboto(fontSize: 24.sp),
-        titleMedium: GoogleFonts.roboto(fontSize: 22.sp),
+        titleLarge:
+            GoogleFonts.roboto(fontSize: 24.sp, fontWeight: FontWeight.bold),
+        titleMedium:
+            GoogleFonts.roboto(fontSize: 22.sp, fontWeight: FontWeight.bold),
         titleSmall: GoogleFonts.roboto(fontSize: 20.sp),
       ),
       //
       iconTheme: IconThemeData(color: Colors.red, size: 24.sp),
       //
       elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.red),
-          foregroundColor: MaterialStateProperty.all(Colors.white),
-          padding: MaterialStateProperty.all(
-            EdgeInsets.symmetric(vertical: 0.h, horizontal: 0.w),
-          ),
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.r)),
-          ),
-        ),
+        style: ElevatedButton.styleFrom(
+            backgroundColor: myPrimeColor,
+            foregroundColor: Colors.white,
+            padding: EdgeInsets.symmetric(vertical: 0.h, horizontal: 0.w),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.r),
+            ),
+            textStyle: GoogleFonts.roboto()),
       ),
       //
       appBarTheme: AppBarTheme(
-        centerTitle: false,
+        centerTitle: true,
         elevation: 0,
         backgroundColor: Colors.transparent,
         titleTextStyle: GoogleFonts.roboto(

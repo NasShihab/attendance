@@ -1,5 +1,6 @@
 import 'package:attendance/go_router/go_rout_singleton.dart';
 import 'package:attendance/screen/auth/auth_page.dart';
+import 'package:attendance/screen/auth/login/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -12,12 +13,17 @@ final GoRouter router = GoRouter(
         GoRoute(
           path: GoRoutSingleton().splashScreen.toString(),
           builder: (BuildContext context, GoRouterState state) =>
-          const SplashScreen(),
+              const SplashScreen(),
         ),
         GoRoute(
           path: GoRoutSingleton().authPage.toString(),
           builder: (BuildContext context, GoRouterState state) =>
               const AuthPage(),
+        ),
+        GoRoute(
+          path: GoRoutSingleton().loginPage.toString(),
+          builder: (BuildContext context, GoRouterState state) =>
+              const LoginPage(),
         ),
       ],
       path: '/',

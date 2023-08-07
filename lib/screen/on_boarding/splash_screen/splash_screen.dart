@@ -1,10 +1,11 @@
 import 'dart:async';
+import 'package:attendance/core/image_asset/image_files.dart';
 import 'package:attendance/go_router/go_rout_singleton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import '../../../custom_property/color/custom_colors.dart';
-import '../../../custom_property/height_weight_spacing.dart';
+import '../../../core/color/custom_colors.dart';
+import '../../../core/height_weight_spacing.dart';
 import '../../../theme_data/text_theme.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -33,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Center(
-                child: Image.asset('assets/icon/nrc.png'),
+                child: Image.asset(ImageCore().logo),
               ),
               height20(),
               Text(
@@ -58,7 +59,6 @@ class _SplashScreenState extends State<SplashScreen> {
                     color: primeColor(context), fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
-
             ],
           ),
         ),
