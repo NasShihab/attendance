@@ -130,7 +130,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   label: Text(
                     'Continue with Google',
-                    style: bodyMedium(context),
+                    style: bodyMedium(context)?.copyWith(color: Colors.black),
                   ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
