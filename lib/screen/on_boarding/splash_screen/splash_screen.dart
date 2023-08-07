@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:attendance/go_router/go_rout_singleton.dart';
-import 'package:attendance/screen/auth/auth_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import '../../../custom_property/color/custom_colors.dart';
 import '../../../custom_property/height_weight_spacing.dart';
 import '../../../theme_data/text_theme.dart';
@@ -19,8 +19,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const AuthPage()));
+      // context.go('/auth');
+      context.go('/${GoRoutSingleton().authPage}');
     });
   }
 

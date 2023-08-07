@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../go_router/go_rout_singleton.dart';
 
 class AuthPage extends StatelessWidget {
@@ -10,12 +11,14 @@ class AuthPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Auth Page'),
+        title: const Text('Auth Page 1'),
       ),
       body: Center(
         child: ElevatedButton(
-          onPressed: () {},
-          child: const Text('Auth Page 222'),
+          onPressed: () {
+           context.go('/${GoRoutSingleton().authPage2}');
+          },
+          child: const Text('Auth Page 2'),
         ),
       ),
     );
