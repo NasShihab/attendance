@@ -1,4 +1,4 @@
-import 'package:attendance/go_router/go_rout_singleton.dart';
+import 'package:attendance/core/go_router/go_rout_singleton.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:attendance/core/image_asset/image_files.dart';
-import 'package:attendance/go_router/go_rout_singleton.dart';
+import 'package:attendance/core/go_router/go_rout_singleton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';

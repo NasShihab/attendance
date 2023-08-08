@@ -1,10 +1,10 @@
-import 'package:attendance/go_router/go_rout_singleton.dart';
+import 'package:attendance/core/go_router/go_rout_singleton.dart';
 import 'package:attendance/screen/auth/auth_page.dart';
 import 'package:attendance/screen/auth/login/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../screen/on_boarding/splash_screen/splash_screen.dart';
+import '../../screen/on_boarding/splash_screen/splash_screen.dart';
 
 final GoRouter router = GoRouter(
   routes: <GoRoute>[

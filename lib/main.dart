@@ -3,7 +3,7 @@ import 'package:attendance/theme_data/theme_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'go_router/routers.dart';
+import 'core/go_router/routers.dart';
 
 void main() {
   runApp(const MyApp());
