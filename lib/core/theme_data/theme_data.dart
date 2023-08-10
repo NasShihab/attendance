@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../core/color/custom_colors.dart';
+import '../color/custom_colors.dart';
 
 ThemeData lightThemeData() {
   return ThemeData(

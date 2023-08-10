@@ -38,6 +38,7 @@ dependencies:
   flutter_screenutil: ^5.8.4
   go_router: ^10.0.0
   google_fonts: ^5.1.0
+  flutter_svg: ^2.0.7
 
 dev_dependencies:
   flutter_test:
@@ -81,23 +82,38 @@ flutter:
     - family: Roboto
       fonts:
         - asset: fonts/roboto/Roboto-Thin.ttf
+          weight: 200
         - asset: fonts/roboto/Roboto-Light.ttf
+          weight: 300
         - asset: fonts/roboto/Roboto-Regular.ttf
+          weight: 400
         - asset: fonts/roboto/Roboto-Medium.ttf
+          weight: 500
         - asset: fonts/roboto/Roboto-Bold.ttf
+          weight: 600
         - asset: fonts/roboto/Roboto-Black.ttf
+          weight: 700
 
     - family: Montserrat
       fonts:
         - asset: fonts/montserrat/Montserrat-Thin.ttf
+          weight: 100
         - asset: fonts/montserrat/Montserrat-ExtraLight.ttf
+          weight: 200
         - asset: fonts/montserrat/Montserrat-Light.ttf
+          weight: 300
         - asset: fonts/montserrat/Montserrat-Regular.ttf
+          weight: 400
         - asset: fonts/montserrat/Montserrat-Medium.ttf
+          weight: 500
         - asset: fonts/montserrat/Montserrat-SemiBold.ttf
+          weight: 600
         - asset: fonts/montserrat/Montserrat-Bold.ttf
+          weight: 700
         - asset: fonts/montserrat/Montserrat-ExtraBold.ttf
+          weight: 800
         - asset: fonts/montserrat/Montserrat-Black.ttf
+          weight: 900
 
   #   - family: Schyler
   #     fonts:

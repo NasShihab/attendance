@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import '../../../core/color/custom_colors.dart';
 import '../../../core/height_weight_spacing.dart';
-import '../../../theme_data/text_theme.dart';
+import '../../../core/theme_data/text_theme.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-      context.go('/${GoRoutSingleton().authPage}');
+      context.go('/${GoRoutSingleton().welcomePage}');
     });
   }
 

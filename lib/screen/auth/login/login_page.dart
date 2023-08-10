@@ -1,11 +1,13 @@
 import 'package:attendance/core/color/custom_colors.dart';
+import 'package:attendance/core/go_router/go_rout_singleton.dart';
 import 'package:attendance/core/height_weight_spacing.dart';
 import 'package:attendance/core/image_asset/image_files.dart';
 import 'package:attendance/core/text_form_field/text_form_field.dart';
-import 'package:attendance/theme_data/text_theme.dart';
+import 'package:attendance/core/theme_data/text_theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -92,7 +94,9 @@ class LoginPage extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.go('/${GoRoutSingleton().loginWaiting}');
+                  },
                   style: ElevatedButton.styleFrom(elevation: 0),
                   child: const Text('Sign In'),
                 ),
