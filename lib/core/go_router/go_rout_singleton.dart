@@ -1,7 +1,7 @@
 import 'package:attendance/screen/auth/login/login_waiting_page.dart';
 import 'package:attendance/screen/auth/sign_up/sign_up_confirmation.dart';
 import 'package:attendance/screen/auth/sign_up/sign_up_page.dart';
-import 'package:attendance/screen/dashboard/dashboard_page.dart';
+import 'package:attendance/screen/dashboard/home_page.dart';
 import 'package:attendance/screen/on_boarding/splash_screen/welcome_page.dart';
 import 'package:attendance/screen/auth/login/login_page.dart';
 import 'package:attendance/screen/on_boarding/splash_screen/splash_screen.dart';
@@ -22,5 +22,5 @@ class GoRoutSingleton {
   String? signUp = const SignUpPage().runtimeType.toString();
   String? signUpConfirmation =
       const SignUpConfirmation().runtimeType.toString();
-  String? dashboard = const Dashboard().runtimeType.toString();
+  String? homePage = const HomePage().runtimeType.toString();
 }

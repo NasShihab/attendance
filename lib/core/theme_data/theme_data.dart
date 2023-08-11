@@ -47,7 +47,7 @@ ThemeData lightThemeData() {
     // AppBar
     appBarTheme: AppBarTheme(
       elevation: 0,
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.white,
       titleTextStyle: TextStyle(
         color: Colors.black,
         fontSize: 24.sp,
@@ -106,7 +106,7 @@ ThemeData darkThemeData() => ThemeData(
       //
       appBarTheme: AppBarTheme(
         elevation: 0,
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.black,
         titleTextStyle: TextStyle(
           color: Colors.black,
           fontSize: 24.sp,

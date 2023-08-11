@@ -1,7 +1,7 @@
 import 'package:attendance/core/go_router/go_rout_singleton.dart';
 import 'package:attendance/screen/auth/login/login_waiting_page.dart';
 import 'package:attendance/screen/auth/sign_up/sign_up_page.dart';
-import 'package:attendance/screen/dashboard/dashboard_page.dart';
+import 'package:attendance/screen/dashboard/home_page.dart';
 import 'package:attendance/screen/on_boarding/splash_screen/welcome_page.dart';
 import 'package:attendance/screen/auth/login/login_page.dart';
 import 'package:flutter/material.dart';
@@ -52,10 +52,10 @@ final GoRouter router = GoRouter(
           const SignUpConfirmation(),
         ),
         GoRoute(
-          name: 'Dashboard Page',
-          path: GoRoutSingleton().dashboard.toString(),
+          name: 'Home Page',
+          path: GoRoutSingleton().homePage.toString(),
           builder: (BuildContext context, GoRouterState state) =>
-              const Dashboard(),
+              const HomePage(),
         ),
       ],
       path: '/',

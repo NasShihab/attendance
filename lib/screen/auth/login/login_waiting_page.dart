@@ -17,7 +17,7 @@ class _LoginWaitingPageState extends State<LoginWaitingPage> {
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: 2), () {
-      Navigator.pushReplacementNamed(context, 'Dashboard');
+      Navigator.pushReplacementNamed(context, 'HomePage');
     });
   }
 

@@ -32,6 +32,9 @@ flutter:
     - assets/images/
     - assets/icon/
     - assets/lottie/
+    - fonts/open_sans/
+    - fonts/montserrat/
+    - fonts/roboto/
 
   fonts:
     - family: Roboto

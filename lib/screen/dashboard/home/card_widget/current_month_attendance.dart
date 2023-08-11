@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../core/color/custom_colors.dart';
-import '../../../core/image_asset/image_files.dart';
-import '../../../core/theme_data/text_theme.dart';
+import '../../../../core/color/custom_colors.dart';
+import '../../../../core/image_asset/image_files.dart';
+import '../../../../core/theme_data/text_theme.dart';
 
 class CurrentMonthAttendance extends StatelessWidget {
   const CurrentMonthAttendance({super.key});
@@ -34,7 +34,7 @@ class CurrentMonthAttendance extends StatelessWidget {
                 ImageCore().currentMonthAttendance,
                 height: 90.h,
                 width: 90.w,
-              )
+              ),
             ],
           )
         ],

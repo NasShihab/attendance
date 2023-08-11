@@ -93,7 +93,7 @@ class LoginPage extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, 'LoginWaitingPage');
+                    Navigator.pushReplacementNamed(context, 'HomePage');
                   },
                   style: ElevatedButton.styleFrom(elevation: 0),
                   child: const Text('Sign In'),

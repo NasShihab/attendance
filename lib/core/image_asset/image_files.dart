@@ -16,6 +16,7 @@ class ImageCore {
   //icons
   String googleIcon = 'assets/icon/google.png';
   String logo = 'assets/icon/nrc.png';
+  String alert = 'assets/icon/alert.png';
 
   //lottie
   String notificationLottie = 'assets/lottie/notification.json';
