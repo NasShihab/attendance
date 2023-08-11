@@ -1,7 +1,10 @@
-import 'package:attendance/core/color/custom_colors.dart';
 import 'package:attendance/core/height_weight_spacing.dart';
 import 'package:attendance/core/image_asset/image_files.dart';
 import 'package:attendance/core/theme_data/text_theme.dart';
+import 'package:attendance/screen/dashboard/card_widget/apply_for_leave.dart';
+import 'package:attendance/screen/dashboard/card_widget/attendance_trends.dart';
+import 'package:attendance/screen/dashboard/card_widget/current_month_attendance.dart';
+import 'package:attendance/screen/dashboard/card_widget/productivity_and_overtime.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
@@ -26,6 +29,7 @@ class Dashboard extends StatelessWidget {
           ),
           child: Column(
             children: [
+              // 1st Profile Row
               Row(
                 children: [
                   Text(
@@ -50,143 +54,23 @@ class Dashboard extends StatelessWidget {
                 ],
               ),
               height20(),
+
+              // Cards
               Row(
                 children: [
                   Column(
                     children: [
-                      InkWell(
-                        onTap: () {},
-                        child: Container(
-                          height: 159.h,
-                          width: 180.w,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.r),
-                            color: myTealAccent,
-                          ),
-                          child: Column(
-                            children: [
-                              Text(
-                                'Current Month Attendance',
-                                style: bodyLarge(context)?.copyWith(
-                                  color: primeColorDark(context),
-                                  fontWeight: FontWeight.bold,
-                                ),
-                                textAlign: TextAlign.center,
-                              ),
-                              Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  const Spacer(),
-                                  Image.asset(
-                                    ImageCore().currentMonthAttendance,
-                                    height: 90.h,
-                                    width: 90.w,
-                                  )
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
+                      const CurrentMonthAttendance(),
                       height20(),
-                      Container(
-                        height: 132.h,
-                        width: 180.w,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.r),
-                            color: myTealAccent),
-                        child: Stack(
-                          children: [
-                            Positioned(
-                              bottom: 1,
-                              right: 1,
-                              child: Image.asset(
-                                ImageCore().overtime,
-                                height: 70.h,
-                                width: 96.w,
-                              ),
-                            ),
-                            Text(
-                              'Productivity & Overtime',
-                              style: bodyLarge(context)?.copyWith(
-                                color: primeColorDark(context),
-                                fontWeight: FontWeight.bold,
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
-                          ],
-                        ),
-                      ),
+                      const ProductivityAndOvertime(),
                     ],
                   ),
                   const Spacer(),
                   Column(
                     children: [
-                      Container(
-                        height: 132.h,
-                        width: 180.w,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.r),
-                            color: myTealAccent),
-                        child: Column(
-                          children: [
-                            Text(
-                              'Apply For Leave',
-                              style: bodyLarge(context)?.copyWith(
-                                  color: primeColorDark(context),
-                                  fontWeight: FontWeight.bold),
-                              textAlign: TextAlign.center,
-                            ),
-                            const Spacer(),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                Image.asset(
-                                  ImageCore().applyForLeave2,
-                                  height: 46.h,
-                                  width: 27.w,
-                                ),
-                                Image.asset(
-                                  ImageCore().applyForLeave1,
-                                  height: 96.h,
-                                  width: 49.w,
-                                ),
-                                Image.asset(
-                                  ImageCore().applyForLeave3,
-                                  height: 74.h,
-                                  width: 38.w,
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
+                      const ApplyFoLeave(),
                       height20(),
-                      Container(
-                        height: 167.h,
-                        width: 182.w,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.r),
-                            color: myTealAccent),
-                        child: Column(
-                          children: [
-                            Text(
-                              'Attendance \n Trends',
-                              style: bodyLarge(context)?.copyWith(
-                                color: primeColorDark(context),
-                                fontWeight: FontWeight.bold,
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
-                            Image.asset(
-                              ImageCore().attendanceTrends,
-                              height: 90.h,
-                              width: 105.w,
-                            ),
-                          ],
-                        ),
-                      ),
+                      const AttendanceTrends(),
                     ],
                   ),
                 ],
