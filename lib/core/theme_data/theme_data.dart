@@ -11,26 +11,24 @@ ThemeData lightThemeData() {
     brightness: Brightness.light,
     primaryColor: const Color(0xff28C76F),
     canvasColor: const Color(0xff00D179),
-    primaryColorDark: Colors.white.withOpacity(.3),
+    primaryColorDark: Colors.black,
 
     textTheme: TextTheme(
       //display
-      displayLarge: GoogleFonts.roboto(
+      displayLarge: TextStyle(
           fontSize: 50.sp, fontWeight: FontWeight.bold, color: Colors.black),
-      displayMedium: GoogleFonts.roboto(
+      displayMedium: TextStyle(
           fontSize: 40.sp, fontWeight: FontWeight.bold, color: Colors.black),
-      displaySmall: GoogleFonts.roboto(
+      displaySmall: TextStyle(
           fontSize: 30.sp, fontWeight: FontWeight.bold, color: Colors.black),
       //body
-      bodyLarge: GoogleFonts.roboto(fontSize: 20.sp),
-      bodyMedium: GoogleFonts.roboto(fontSize: 18.sp, color: Colors.grey[900]),
-      bodySmall: GoogleFonts.roboto(fontSize: 15.sp),
+      bodyLarge: TextStyle(fontSize: 20.sp),
+      bodyMedium: TextStyle(fontSize: 18.sp, color: Colors.grey[900]),
+      bodySmall: TextStyle(fontSize: 16.sp),
       //title
-      titleLarge:
-          GoogleFonts.roboto(fontSize: 24.sp, fontWeight: FontWeight.bold),
-      titleMedium:
-          GoogleFonts.roboto(fontSize: 22.sp, fontWeight: FontWeight.bold),
-      titleSmall: GoogleFonts.roboto(fontSize: 20.sp),
+      titleLarge: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
+      titleMedium: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
+      titleSmall: TextStyle(fontSize: 20.sp),
     ),
     //
     iconTheme: IconThemeData(color: Colors.red, size: 24.sp),
@@ -48,10 +46,9 @@ ThemeData lightThemeData() {
     ),
     // AppBar
     appBarTheme: AppBarTheme(
-      centerTitle: true,
       elevation: 0,
       backgroundColor: Colors.transparent,
-      titleTextStyle: GoogleFonts.roboto(
+      titleTextStyle: TextStyle(
         color: Colors.black,
         fontSize: 24.sp,
         fontWeight: FontWeight.bold,
@@ -76,23 +73,21 @@ ThemeData darkThemeData() => ThemeData(
       brightness: Brightness.dark,
       primaryColor: lightThemeData().primaryColor,
       canvasColor: lightThemeData().canvasColor,
-      primaryColorDark: Colors.black.withOpacity(.3),
+  primaryColorDark: Colors.black,
 
       textTheme: TextTheme(
-        displayLarge: GoogleFonts.roboto(
+        displayLarge: TextStyle(
             fontSize: 50.sp, fontWeight: FontWeight.bold, color: Colors.white),
-        displayMedium: GoogleFonts.roboto(
+        displayMedium: TextStyle(
             fontSize: 40.sp, fontWeight: FontWeight.bold, color: Colors.white),
-        displaySmall: GoogleFonts.roboto(
+        displaySmall: TextStyle(
             fontSize: 30.sp, fontWeight: FontWeight.bold, color: Colors.white),
-        bodyLarge: GoogleFonts.roboto(fontSize: 20.sp),
-        bodyMedium: GoogleFonts.roboto(fontSize: 18.sp),
-        bodySmall: GoogleFonts.roboto(fontSize: 15.sp),
+        bodyLarge: TextStyle(fontSize: 20.sp),
+        bodyMedium: TextStyle(fontSize: 18.sp),
+        bodySmall: TextStyle(fontSize: 16.sp),
         //title
-        titleLarge:
-            GoogleFonts.roboto(fontSize: 24.sp, fontWeight: FontWeight.bold),
-        titleMedium:
-            GoogleFonts.roboto(fontSize: 22.sp, fontWeight: FontWeight.bold),
+        titleLarge: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
+        titleMedium: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
         titleSmall: GoogleFonts.roboto(fontSize: 20.sp),
       ),
       //
@@ -100,21 +95,20 @@ ThemeData darkThemeData() => ThemeData(
       //
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-            backgroundColor: myPrimeColor,
-            foregroundColor: Colors.white,
-            padding: EdgeInsets.symmetric(vertical: 0.h, horizontal: 0.w),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.r),
-            ),
-            textStyle: GoogleFonts.roboto()),
+          backgroundColor: myPrimeColor,
+          foregroundColor: Colors.white,
+          padding: EdgeInsets.symmetric(vertical: 0.h, horizontal: 0.w),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.r),
+          ),
+        ),
       ),
       //
       appBarTheme: AppBarTheme(
-        centerTitle: true,
         elevation: 0,
         backgroundColor: Colors.transparent,
-        titleTextStyle: GoogleFonts.roboto(
-          color: Colors.white,
+        titleTextStyle: TextStyle(
+          color: Colors.black,
           fontSize: 24.sp,
           fontWeight: FontWeight.bold,
         ),
@@ -122,7 +116,6 @@ ThemeData darkThemeData() => ThemeData(
           color: Colors.red,
           size: 24.sp,
         ),
-
       ),
       tabBarTheme:
           const TabBarTheme(labelColor: Colors.red, indicatorColor: Colors.red),

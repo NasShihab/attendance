@@ -13,3 +13,4 @@ primeColorDark(BuildContext context) {
 }
 
 dynamic myPrimeColor = const Color(0xff28C76F);
+dynamic myTealAccent = const Color(0xffBCE8D3);
