@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-      context.go('/${GoRoutSingleton().welcomePage}');
+      Navigator.pushNamed(context, 'WelcomePage');
     });
   }
 
@@ -30,36 +30,45 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 60.w),
         child: SafeArea(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Center(
-                child: Image.asset(ImageCore().logo),
-              ),
-              height20(),
-              Text(
-                'clock-in',
-                style: titleLarge(context)?.copyWith(
-                  fontSize: 65.sp,
-                  color: primeColor(context),
-                  fontFamily: 'Montserrat',
-                  fontWeight: FontWeight.w600,
-                  shadows: [
-                    Shadow(
-                        offset: const Offset(-4, -2),
-                        color: Colors.black.withOpacity(.3),
-                        blurRadius: 4),
-                  ],
+          child: InkWell(
+            onTap: () {
+              context.push('${GoRoutSingleton().welcomePage}');
+            },
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                  child: Image.asset(ImageCore().logo),
                 ),
-              ),
-              height60(),
-              Text(
-                'Effortlessly manage your time with clock in',
-                style: bodyLarge(context)?.copyWith(
-                    color: primeColor(context), fontWeight: FontWeight.bold),
-                textAlign: TextAlign.center,
-              ),
-            ],
+                height20(),
+                Text(
+                  'clock-in',
+                  style: titleLarge(context)?.copyWith(
+                    fontSize: 65.sp,
+                    color: primeColor(context),
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.w600,
+                    shadows: [
+                      Shadow(
+                          offset: const Offset(-4, -2),
+                          color: Colors.black.withOpacity(.3),
+                          blurRadius: 4),
+                    ],
+                  ),
+                ),
+                height60(),
+                Text(
+                  'Effortlessly manage your time with clock in',
+                  style: bodyLarge(context)?.copyWith(
+                      color: primeColor(context), fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.center,
+                ),
+                height20(),
+                CircularProgressIndicator(
+                  color: primeColor(context),
+                )
+              ],
+            ),
           ),
         ),
       ),

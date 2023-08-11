@@ -4,11 +4,12 @@ import 'package:attendance/core/image_asset/image_files.dart';
 import 'package:attendance/core/text_form_field/text_form_field.dart';
 import 'package:attendance/core/theme_data/text_theme.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,16 +28,38 @@ class LoginPage extends StatelessWidget {
             children: [
               Center(
                 child: Image.asset(
-                  ImageCore().welcome,
-                  height: myHeight(context) * .30,
+                  ImageCore().signUp,
+                  height: myHeight(context) * .20,
                 ),
               ),
+              height20(),
+              Center(
+                child: Text(
+                  'Sign Up',
+                  style: displayMedium(context)
+                      ?.copyWith(color: primeColor(context), fontSize: 35.sp),
+                ),
+              ),
+              height20(),
               SizedBox(
                 height: 50.h,
                 child: CustomTextFormField(
+                  labelText: 'Full Name',
+                  prefixIcon: Icon(
+                    CupertinoIcons.profile_circled,
+                    color: primeColor(context),
+                  ),
+                  controller: TextEditingController(),
+                ),
+              ),
+              height20(),
+              SizedBox(
+                height: 50.h,
+                child: CustomTextFormField(
+                  obscureText: true,
                   labelText: 'Email',
                   prefixIcon: Icon(
-                    Icons.email,
+                    Icons.email_outlined,
                     color: primeColor(context),
                   ),
                   controller: TextEditingController(),
@@ -49,7 +72,7 @@ class LoginPage extends StatelessWidget {
                   obscureText: true,
                   labelText: 'Password',
                   prefixIcon: Icon(
-                    Icons.shield_rounded,
+                    Icons.shield_outlined,
                     color: primeColor(context),
                   ),
                   suffixIcon: const Icon(
@@ -59,44 +82,56 @@ class LoginPage extends StatelessWidget {
                   controller: TextEditingController(),
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  TextButton(
-                    onPressed: () {},
-                    style: TextButton.styleFrom(padding: EdgeInsets.zero),
-                    child: Text(
-                      'Forget Password',
-                      style: bodyMedium(context)?.copyWith(
-                        color: primeColor(context),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Checkbox(
+                      value: true,
+                      onChanged: (value) {},
+                      activeColor: primeColor(context),
+                    ),
+                    RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: 'I agree the ',
+                            style: bodySmall(context),
+                          ),
+                          TextSpan(
+                            text: 'Terms and Services',
+                            style: bodySmall(context)?.copyWith(
+                              color: primeColor(context),
+                            ),
+                            recognizer: TapGestureRecognizer()..onTap = () {},
+                          ),
+                          TextSpan(
+                            text: ' and ',
+                            style: bodySmall(context),
+                          ),
+                          TextSpan(
+                            text: 'Privacy and Policy',
+                            style: bodySmall(context)?.copyWith(
+                              color: primeColor(context),
+                            ),
+                            recognizer: TapGestureRecognizer()..onTap = () {},
+                          ),
+                        ],
                       ),
                     ),
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Checkbox(
-                        value: true,
-                        onChanged: (value) {},
-                        activeColor: primeColor(context),
-                      ),
-                      Text(
-                        'Remember me',
-                        style: bodySmall(context),
-                      )
-                    ],
-                  ),
-                ],
+                  ],
+                ),
               ),
               height10(),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, 'LoginWaitingPage');
+                    Navigator.pushNamed(context, 'SignUpConfirmation');
                   },
                   style: ElevatedButton.styleFrom(elevation: 0),
-                  child: const Text('Sign In'),
+                  child: const Text('Create Account'),
                 ),
               ),
               height10(),
@@ -104,17 +139,17 @@ class LoginPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Don\'t have an account?',
+                    'Already have an account',
                     style: bodyMedium(context),
                   ),
                   width5(),
                   TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, 'SignUpPage');
+                      Navigator.pushNamed(context, 'LoginPage');
                     },
                     style: TextButton.styleFrom(padding: EdgeInsets.zero),
                     child: Text(
-                      'Sign Up',
+                      'Sign In',
                       style: bodyMedium(context)?.copyWith(
                         color: primeColor(context),
                       ),

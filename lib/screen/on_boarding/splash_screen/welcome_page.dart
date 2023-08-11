@@ -1,14 +1,12 @@
-import 'package:attendance/core/go_router/go_rout_singleton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../core/color/custom_colors.dart';
 import '../../../core/height_weight_spacing.dart';
 import '../../../core/theme_data/text_theme.dart';
 
-class AuthPage extends StatelessWidget {
-  const AuthPage({super.key});
+class WelcomePage extends StatelessWidget {
+  const WelcomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -100,7 +98,7 @@ class AuthPage extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      context.push('/${GoRoutSingleton().loginPage}');
+                      Navigator.pushNamed(context, 'LoginPage');
                     },
                     child: const Text('Sign In'),
                   ),
@@ -110,7 +108,7 @@ class AuthPage extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      context.push('/${GoRoutSingleton().loginPage}');
+                      Navigator.pushNamed(context, 'SignUpPage');
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,

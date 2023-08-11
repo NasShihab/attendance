@@ -1,12 +1,9 @@
 import 'dart:async';
-
+import 'package:attendance/core/color/custom_colors.dart';
 import 'package:attendance/core/image_asset/image_files.dart';
 import 'package:attendance/core/theme_data/text_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
-
-import '../../../core/go_router/go_rout_singleton.dart';
 
 class LoginWaitingPage extends StatefulWidget {
   const LoginWaitingPage({super.key});
@@ -19,8 +16,8 @@ class _LoginWaitingPageState extends State<LoginWaitingPage> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 2), () {
-      context.go('/${GoRoutSingleton().dashboard}');
+    Future.delayed(const Duration(seconds: 2), () {
+      Navigator.pushReplacementNamed(context, 'Dashboard');
     });
   }
 
@@ -41,7 +38,8 @@ class _LoginWaitingPageState extends State<LoginWaitingPage> {
                 'Loading your account information, please wait...',
                 style: bodyMedium(context),
                 textAlign: TextAlign.center,
-              )
+              ),
+              CircularProgressIndicator(color: primeColor(context),)
             ],
           ),
         ),

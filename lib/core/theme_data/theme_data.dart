@@ -122,6 +122,7 @@ ThemeData darkThemeData() => ThemeData(
           color: Colors.red,
           size: 24.sp,
         ),
+
       ),
       tabBarTheme:
           const TabBarTheme(labelColor: Colors.red, indicatorColor: Colors.red),
