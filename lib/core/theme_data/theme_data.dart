@@ -12,6 +12,7 @@ ThemeData lightThemeData() {
     primaryColor: const Color(0xff28C76F),
     canvasColor: const Color(0xff00D179),
     primaryColorDark: Colors.black,
+    focusColor: Colors.white,
 
     textTheme: TextTheme(
       //display
@@ -73,7 +74,8 @@ ThemeData darkThemeData() => ThemeData(
       brightness: Brightness.dark,
       primaryColor: lightThemeData().primaryColor,
       canvasColor: lightThemeData().canvasColor,
-  primaryColorDark: Colors.black,
+      primaryColorDark: Colors.black,
+      focusColor: Colors.black,
 
       textTheme: TextTheme(
         displayLarge: TextStyle(

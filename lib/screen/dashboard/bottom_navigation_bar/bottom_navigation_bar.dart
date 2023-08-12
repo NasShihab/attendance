@@ -16,16 +16,17 @@ class MyBottomNavigationBar extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 5.h),
       padding: EdgeInsets.symmetric(horizontal: 10.w),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: focusColor(context),
         borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(20.r),
-            bottomRight: Radius.circular(20.r)),
+          bottomLeft: Radius.circular(20.r),
+          bottomRight: Radius.circular(20.r),
+        ),
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.5),
             spreadRadius: 3,
             blurRadius: 2,
-            offset: const Offset(0, 3), // changes position of shadow
+            offset: const Offset(0, 3),
           ),
         ],
       ),
@@ -53,32 +54,27 @@ List<BottomIconModel> list(BuildContext context) {
     BottomIconModel(
       lottieAsset: ImageCore().notificationLottie,
       title: 'Notification',
-      onTap: () {
-      },
+      onTap: () {},
     ),
     BottomIconModel(
       lottieAsset: ImageCore().chatLottie,
       title: 'Chat',
-      onTap: () {
-      },
+      onTap: () {},
     ),
     BottomIconModel(
       lottieAsset: ImageCore().homeLottie,
       title: 'Home',
-      onTap: () {
-      },
+      onTap: () {},
     ),
     BottomIconModel(
       lottieAsset: ImageCore().calenderLottie,
       title: 'Calender',
-      onTap: () {
-      },
+      onTap: () {},
     ),
     BottomIconModel(
       lottieAsset: ImageCore().profileLottie,
       title: 'Profile',
-      onTap: () {
-      },
+      onTap: () {},
     ),
   ];
 }
@@ -101,7 +97,7 @@ Widget bottomIconText(
         Text(
           title,
           style: bodySmall(context)
-              ?.copyWith(color: primeColorDark(context), fontSize: 12.sp),
+              ?.copyWith( fontSize: 12.sp),
         )
       ],
     ),
