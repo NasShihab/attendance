@@ -10,8 +10,8 @@ import 'package:flutter/material.dart';
 import '../../screen/on_boarding/splash_screen/splash_screen.dart';
 
 var myRoutes = <String, WidgetBuilder>{
-  // '/': (context) => const HomePage(),
-  '/': (context) => const SplashScreen(),
+  '/': (context) => const HomePage(),
+  // '/': (context) => const SplashScreen(),
   '${GoRoutSingleton().welcomePage}': (context) => const WelcomePage(),
   '${GoRoutSingleton().loginPage}': (context) => const LoginPage(),
   '${GoRoutSingleton().loginWaiting}': (context) => const LoginWaitingPage(),

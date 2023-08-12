@@ -6,11 +6,13 @@ import 'package:attendance/screen/dashboard/home/card_widget/apply_for_leave.dar
 import 'package:attendance/screen/dashboard/home/card_widget/attendance_trends.dart';
 import 'package:attendance/screen/dashboard/home/card_widget/current_month_attendance.dart';
 import 'package:attendance/screen/dashboard/home/card_widget/productivity_and_overtime.dart';
-import 'package:attendance/screen/dashboard/home/time_and_status_bar.dart';
+import 'package:attendance/screen/dashboard/home/widget/time_and_status_bar/time_and_status_bar.dart';
+import 'package:attendance/screen/dashboard/home/widget/timeline_tile/timeline_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:timeline_tile/timeline_tile.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -166,60 +168,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   const Spacer(),
-                  Container(
-                    height: 213.h,
-                    width: 154.w,
-                    padding: EdgeInsets.all(5.r),
-                    decoration: BoxDecoration(
-                        color: const Color(
-                          0xffBCE8D3,
-                        ),
-                        borderRadius: BorderRadius.circular(15.r)),
-                    child: Column(
-                      children: [
-                        Text(
-                          'TODAY’s ACTIVITY',
-                          style: GoogleFonts.openSans(
-                            fontSize: 13.sp,
-                            fontWeight: FontWeight.bold,
-                            color: primeColorDark(context),
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                        const Spacer(),
-                        Text(
-                          'Check IN',
-                          style: openSans(context),
-                        ),
-                        const Spacer(),
-                        Text(
-                          'BREAK TIME START',
-                          style: openSans(context),
-                        ),
-                        const Spacer(),
-                        Text(
-                          'BREAK TIME DONE',
-                          style: openSans(context),
-                        ),
-                        const Spacer(),
-                        Text(
-                          'LUNCH START',
-                          style: openSans(context),
-                        ),
-                        const Spacer(),
-                        Text(
-                          'LUNCH DONE',
-                          style: openSans(context),
-                        ),
-                        const Spacer(),
-                        Text(
-                          'CHECK OUT',
-                          style: openSans(context),
-                        ),
-                        const Spacer(),
-                      ],
-                    ),
-                  )
+                  const MyTimeLineTile(),
                 ],
               )
             ],
