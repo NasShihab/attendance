@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
           'H Dashboard',
           style: titleMedium(context),
         ),
-        elevation: 5,
+        elevation: 2,
         shadowColor: Colors.grey,
       ),
       body: SafeArea(
@@ -37,6 +37,7 @@ class HomePage extends StatelessWidget {
           child: ListView(
             children: [
               // 1st Profile Row
+              height10(),
               Row(
                 children: [
                   Text(
