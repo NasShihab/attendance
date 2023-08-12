@@ -13,19 +13,9 @@ class ProductivityAndOvertime extends StatelessWidget {
       height: 132.h,
       width: 180.w,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15.r),
-          color: myTealAccent),
-      child: Stack(
+          borderRadius: BorderRadius.circular(15.r), color: myTealAccent),
+      child: Column(
         children: [
-          Positioned(
-            bottom: 1,
-            right: 1,
-            child: Image.asset(
-              ImageCore().overtime,
-              height: 70.h,
-              width: 96.w,
-            ),
-          ),
           Text(
             'Productivity & Overtime',
             style: bodyLarge(context)?.copyWith(
@@ -33,6 +23,16 @@ class ProductivityAndOvertime extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
             textAlign: TextAlign.center,
+          ),
+          Row(
+            children: [
+              const Spacer(),
+              Image.asset(
+                ImageCore().overtime,
+                height: 60.h,
+                width: 96.w,
+              ),
+            ],
           ),
         ],
       ),

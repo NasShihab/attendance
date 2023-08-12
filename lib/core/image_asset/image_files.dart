@@ -20,4 +20,8 @@ class ImageCore {
 
   //lottie
   String notificationLottie = 'assets/lottie/notification.json';
+  String chatLottie = 'assets/lottie/chat.json';
+  String homeLottie = 'assets/lottie/home.json';
+  String calenderLottie = 'assets/lottie/calender.json';
+  String profileLottie = 'assets/lottie/profile.json';
 }

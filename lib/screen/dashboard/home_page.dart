@@ -2,6 +2,7 @@ import 'package:attendance/core/color/custom_colors.dart';
 import 'package:attendance/core/height_weight_spacing.dart';
 import 'package:attendance/core/image_asset/image_files.dart';
 import 'package:attendance/core/theme_data/text_theme.dart';
+import 'package:attendance/screen/dashboard/bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'package:attendance/screen/dashboard/home/card_widget/apply_for_leave.dart';
 import 'package:attendance/screen/dashboard/home/card_widget/attendance_trends.dart';
 import 'package:attendance/screen/dashboard/home/card_widget/current_month_attendance.dart';
@@ -19,16 +20,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(color: myPrimeColor),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Lottie.asset(ImageCore().notificationLottie,
-                height: 56.h, width: 56.w),
-          ],
-        ),
-      ),
+      bottomNavigationBar: const MyBottomNavigationBar(),
       appBar: AppBar(
         title: Text(
           'H Dashboard',
@@ -41,10 +33,8 @@ class HomePage extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.symmetric(
             horizontal: 20.w,
-            vertical: 20.h,
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: ListView(
             children: [
               // 1st Profile Row
               Row(
@@ -70,7 +60,6 @@ class HomePage extends StatelessWidget {
                   )
                 ],
               ),
-              const Spacer(),
               // Cards
               Row(
                 children: [
@@ -85,17 +74,15 @@ class HomePage extends StatelessWidget {
                   Column(
                     children: [
                       const ApplyFoLeave(),
-                      height20(),
+                      height10(),
                       const AttendanceTrends(),
                     ],
                   ),
                 ],
               ),
-              const Spacer(),
-
               // Status
+              height20(),
               const TimeAndStatusBar(),
-              const Spacer(),
               const ReminderBar(),
             ],
           ),
