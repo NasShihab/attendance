@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -32,98 +33,92 @@ class MyTimeLineTile extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
-          SizedBox(
-            height: 28.h,
-            child: TimelineTile(
-              indicatorStyle:
-              IndicatorStyle(height: 13.h, width: 18.w),
-              lineXY: 10,
-              alignment: TimelineAlign.start,
-              isFirst: true,
-              endChild: Text(
-                'Check IN',
-                style: openSans(context),
-              ),
-            ),
+          myTimeLineTile(
+            context,
+            isFirst: true,
+            isLast: false,
+            isChecked: true,
+            endChildText: 'Check IN',
           ),
-          SizedBox(
-            height: 28.h,
-            child: TimelineTile(
-              indicatorStyle: IndicatorStyle(
-                height: 13.h,
-                width: 18.w,
-              ),
-              lineXY: 10,
-              alignment: TimelineAlign.start,
-              endChild: Text(
-                'Check IN',
-                style: openSans(context),
-              ),
-            ),
+          myTimeLineTile(
+            context,
+            isFirst: false,
+            isLast: false,
+            isChecked: true,
+            endChildText: 'BREAK TIME START',
           ),
-          SizedBox(
-            height: 28.h,
-            child: TimelineTile(
-              indicatorStyle: IndicatorStyle(
-                height: 13.h,
-                width: 18.w,
-              ),
-              lineXY: 10,
-              alignment: TimelineAlign.start,
-              endChild: Text(
-                'Check IN',
-                style: openSans(context),
-              ),
-            ),
+          myTimeLineTile(
+            context,
+            isFirst: false,
+            isLast: false,
+            isChecked: true,
+            endChildText: 'BREAK TIME DONE',
           ),
-          SizedBox(
-            height: 28.h,
-            child: TimelineTile(
-              indicatorStyle: IndicatorStyle(
-                height: 13.h,
-                width: 18.w,
-              ),
-              lineXY: 10,
-              alignment: TimelineAlign.start,
-              endChild: Text(
-                'Check IN',
-                style: openSans(context),
-              ),
-            ),
+          myTimeLineTile(
+            context,
+            isFirst: false,
+            isLast: false,
+            isChecked: true,
+            endChildText: 'LUNCH START',
           ),
-          SizedBox(
-            height: 28.h,
-            child: TimelineTile(
-              indicatorStyle: IndicatorStyle(
-                  height: 13.h,
-                  width: 18.w,
-                  color: const Color(0xff37C23C)),
-              lineXY: 10,
-              alignment: TimelineAlign.start,
-              endChild: Text(
-                'Check IN',
-                style: openSans(context),
-              ),
-            ),
+          myTimeLineTile(
+            context,
+            isFirst: false,
+            isLast: false,
+            isChecked: false,
+            endChildText: 'LUNCH DONE',
           ),
-          SizedBox(
-            height: 28.h,
-            child: TimelineTile(
-              indicatorStyle: IndicatorStyle(
-                height: 13.h,
-                width: 18.w,
-              ),
-              lineXY: 10,
-              alignment: TimelineAlign.start,
-              isLast: true,
-              endChild: Text(
-                'Check IN',
-                style: openSans(context),
-              ),
-            ),
+          myTimeLineTile(
+            context,
+            isFirst: false,
+            isLast: true,
+            isChecked: false,
+            endChildText: 'CHECK OUT',
           ),
         ],
       ),
     );
   }
+}
+
+Widget myTimeLineTile(
+  BuildContext context, {
+  required bool isFirst,
+  required bool isLast,
+  required isChecked,
+  required String endChildText,
+}) {
+  return SizedBox(
+    height: 30.h,
+    child: TimelineTile(
+      isFirst: isFirst,
+      isLast: isLast,
+      beforeLineStyle: LineStyle(
+        color: isChecked ? const Color(0xff37C23C) : Colors.grey,
+      ),
+      indicatorStyle: IndicatorStyle(
+        height: 13.h,
+        width: 18.w,
+        color: isChecked ? const Color(0xff37C23C) : Colors.grey,
+        padding: EdgeInsets.only(right: 10.w, left: 15.w),
+        iconStyle: isChecked
+            ? IconStyle(
+                iconData: Icons.check,
+                color: Colors.white,
+                fontSize: 10.sp,
+              )
+            : IconStyle(
+                iconData: Icons.circle,
+                color: Colors.white,
+                fontSize: 8.sp,
+              ),
+      ),
+      lineXY: 10,
+      alignment: TimelineAlign.start,
+      endChild: Text(
+        endChildText,
+        style: openSans(context).copyWith(fontSize: 10.sp),
+      ),
+    ),
+  );
 }

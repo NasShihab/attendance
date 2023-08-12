@@ -7,8 +7,6 @@ import 'package:attendance/screen/dashboard/home_page.dart';
 import 'package:attendance/screen/on_boarding/splash_screen/welcome_page.dart';
 import 'package:flutter/material.dart';
 
-import '../../screen/on_boarding/splash_screen/splash_screen.dart';
-
 var myRoutes = <String, WidgetBuilder>{
   '/': (context) => const HomePage(),
   // '/': (context) => const SplashScreen(),
