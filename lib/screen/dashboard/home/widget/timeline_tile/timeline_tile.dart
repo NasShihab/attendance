@@ -1,11 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
 import '../../../../../core/color/custom_colors.dart';
-import '../../../home_page.dart';
+import '../../home_page.dart';
 
 class MyTimeLineTile extends StatelessWidget {
   const MyTimeLineTile({super.key});
