@@ -79,7 +79,9 @@ class _DashBoardState extends State<DashBoard> {
             ),
             bottomIconText(
               context,
-              lottieAsset: ImageCore().chatLottie,
+              lottieAsset: selectedIndex == 1
+                  ? ImageCore().chatLottie
+                  : ImageCore().chatOffLottie,
               title: 'Chat',
               onTap: () {
                 setState(() {
@@ -89,7 +91,9 @@ class _DashBoardState extends State<DashBoard> {
             ),
             bottomIconText(
               context,
-              lottieAsset: ImageCore().homeOffLottie,
+              lottieAsset: selectedIndex == 2
+                  ? ImageCore().homeLottie
+                  : ImageCore().homeOffLottie,
               title: 'Home',
               onTap: () {
                 setState(() {
@@ -99,7 +103,9 @@ class _DashBoardState extends State<DashBoard> {
             ),
             bottomIconText(
               context,
-              lottieAsset: ImageCore().calenderLottie,
+              lottieAsset: selectedIndex == 3
+                  ? ImageCore().calenderLottie
+                  : ImageCore().calenderOffLottie,
               title: 'Calendar',
               onTap: () {
                 setState(() {
@@ -109,7 +115,9 @@ class _DashBoardState extends State<DashBoard> {
             ),
             bottomIconText(
               context,
-              lottieAsset: ImageCore().profileLottie,
+              lottieAsset: selectedIndex == 4
+                  ? ImageCore().profileLottie
+                  : ImageCore().profileOffLottie,
               title: 'Profile',
               onTap: () {
                 setState(() {
