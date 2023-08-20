@@ -12,10 +12,11 @@ class ReminderBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     String selectedOption = 'show more';
     List<String> options = ['show more', 'Option 2', 'Option 3', 'Show More'];
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Row(
           children: [
@@ -44,59 +45,64 @@ class ReminderBar extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              height: 94.h,
-              width: 220.w,
-              padding:
-              EdgeInsets.only(left: 15.w, right: 5.w, bottom: 5.h),
-              decoration: BoxDecoration(
-                color: const Color(0xfffaf0ca),
-                borderRadius: BorderRadius.circular(15.r),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Row(
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  height: 94.h,
+                  width: 220.w,
+                  padding: EdgeInsets.only(left: 15.w, right: 5.w, bottom: 5.h),
+                  decoration: BoxDecoration(
+                    color: const Color(0xfffaf0ca),
+                    borderRadius: BorderRadius.circular(15.r),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Expanded(
-                        flex: 3,
-                        child: Text(
-                          'Your Leave Balance Update for the Quarter:',
-                          style: bodySmall(context)?.copyWith(
-                              fontSize: 12.sp,
-                              color: const Color(0xffF76B1C),
-                              fontWeight: FontWeight.w500),
-                          maxLines: 3,
-                        ),
+                      Row(
+                        children: [
+                          Expanded(
+                            flex: 3,
+                            child: Text(
+                              'Your Leave Balance Update for the Quarter:',
+                              style: bodySmall(context)?.copyWith(
+                                  fontSize: 12.sp,
+                                  color: const Color(0xffF76B1C),
+                                  fontWeight: FontWeight.w500),
+                              maxLines: 3,
+                            ),
+                          ),
+                          Expanded(
+                            flex: 1,
+                            child: Image.asset(
+                              ImageCore().alert,
+                            ),
+                          ),
+                        ],
                       ),
-                      Expanded(
-                        flex: 1,
-                        child: Image.asset(
-                          ImageCore().alert,
-                        ),
-                      ),
+                      Column(
+                        children: [
+                          Text(
+                            'Barton! You have 3 days of leave balance remaining for this quarter.',
+                            style: bodySmall(context)?.copyWith(
+                                fontSize: 11.sp,
+                                fontWeight: FontWeight.w500,
+                                color: primeColorDark(context)),
+                            maxLines: 3,
+                          ),
+                        ],
+                      )
                     ],
                   ),
-                  Column(
-                    children: [
-                      Text(
-                        'Barton! You have 3 days of leave balance remaining for this quarter.',
-                        style: bodySmall(context)?.copyWith(
-                            fontSize: 11.sp,
-                            fontWeight: FontWeight.w500,
-                            color: primeColorDark(context)),
-                        maxLines: 3,
-                      ),
-                    ],
-                  )
-                ],
-              ),
+                ),
+                Text('data')
+              ],
             ),
             const Spacer(),
             const MyTimeLineTile(),
           ],
-        )
+        ),
       ],
     );
   }
