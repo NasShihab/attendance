@@ -10,27 +10,29 @@ class AttendanceTrends extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 167.h,
+      // height: 167.h,
       width: 182.w,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15.r),
           color: myTealAccent),
-      child: Column(
-        children: [
-          Text(
-            'Attendance \n Trends',
-            style: bodyLarge(context)?.copyWith(
-              color: primeColorDark(context),
-              fontWeight: FontWeight.bold,
+      child: IntrinsicHeight(
+        child: Column(
+          children: [
+            Text(
+              'Attendance \n Trends',
+              style: bodyLarge(context)?.copyWith(
+                color: primeColorDark(context),
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
             ),
-            textAlign: TextAlign.center,
-          ),
-          Image.asset(
-            ImageCore().attendanceTrends,
-            height: 90.h,
-            width: 105.w,
-          ),
-        ],
+            Image.asset(
+              ImageCore().attendanceTrends,
+              height: 90.h,
+              width: 105.w,
+            ),
+          ],
+        ),
       ),
     );
   }

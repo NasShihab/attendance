@@ -49,54 +49,56 @@ class ReminderBar extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  height: 94.h,
+                  // height: 94.h,
                   width: 220.w,
                   padding: EdgeInsets.only(left: 15.w, right: 5.w, bottom: 5.h),
                   decoration: BoxDecoration(
                     color: const Color(0xfffaf0ca),
                     borderRadius: BorderRadius.circular(15.r),
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Expanded(
-                            flex: 3,
-                            child: Text(
-                              'Your Leave Balance Update for the Quarter:',
+                  child: IntrinsicHeight(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Expanded(
+                              flex: 3,
+                              child: Text(
+                                'Your Leave Balance Update for the Quarter:',
+                                style: bodySmall(context)?.copyWith(
+                                    fontSize: 12.sp,
+                                    color: const Color(0xffF76B1C),
+                                    fontWeight: FontWeight.w500),
+                                maxLines: 3,
+                              ),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: Image.asset(
+                                ImageCore().alert,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              'Barton! You have 3 days of leave balance remaining for this quarter.',
                               style: bodySmall(context)?.copyWith(
-                                  fontSize: 12.sp,
-                                  color: const Color(0xffF76B1C),
-                                  fontWeight: FontWeight.w500),
+                                  fontSize: 11.sp,
+                                  fontWeight: FontWeight.w500,
+                                  color: primeColorDark(context)),
                               maxLines: 3,
                             ),
-                          ),
-                          Expanded(
-                            flex: 1,
-                            child: Image.asset(
-                              ImageCore().alert,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            'Barton! You have 3 days of leave balance remaining for this quarter.',
-                            style: bodySmall(context)?.copyWith(
-                                fontSize: 11.sp,
-                                fontWeight: FontWeight.w500,
-                                color: primeColorDark(context)),
-                            maxLines: 3,
-                          ),
-                        ],
-                      )
-                    ],
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
-                Text('data')
+                Text('Performance Check', style: bodyMedium(context),)
               ],
             ),
             const Spacer(),

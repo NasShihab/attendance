@@ -10,31 +10,33 @@ class ProductivityAndOvertime extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 132.h,
+      // height: 132.h,
       width: 180.w,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15.r), color: myTealAccent),
-      child: Column(
-        children: [
-          Text(
-            'Productivity & Overtime',
-            style: bodyLarge(context)?.copyWith(
-              color: primeColorDark(context),
-              fontWeight: FontWeight.bold,
-            ),
-            textAlign: TextAlign.center,
-          ),
-          Row(
-            children: [
-              const Spacer(),
-              Image.asset(
-                ImageCore().overtime,
-                height: 60.h,
-                width: 96.w,
+      child: IntrinsicHeight(
+        child: Column(
+          children: [
+            Text(
+              'Productivity & Overtime',
+              style: bodyLarge(context)?.copyWith(
+                color: primeColorDark(context),
+                fontWeight: FontWeight.bold,
               ),
-            ],
-          ),
-        ],
+              textAlign: TextAlign.center,
+            ),
+            Row(
+              children: [
+                const Spacer(),
+                Image.asset(
+                  ImageCore().overtime,
+                  height: 60.h,
+                  width: 96.w,
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

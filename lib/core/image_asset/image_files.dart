@@ -12,6 +12,7 @@ class ImageCore {
   String applyForLeave3 = 'assets/images/apply_for_leave3.png';
   String overtime = 'assets/images/Overtime.png';
   String attendanceTrends = 'assets/images/AttendanceTrends.png';
+  String ratings = 'assets/images/rating.png';
 
   //icons
   String googleIcon = 'assets/icon/google.png';

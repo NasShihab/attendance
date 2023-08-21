@@ -10,43 +10,45 @@ class ApplyFoLeave extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 132.h,
+      // height: 132.h,
       width: 180.w,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15.r),
           color: myTealAccent),
-      child: Column(
-        children: [
-          Text(
-            'Apply For Leave',
-            style: bodyLarge(context)?.copyWith(
-                color: primeColorDark(context),
-                fontWeight: FontWeight.bold),
-            textAlign: TextAlign.center,
-          ),
-          const Spacer(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Image.asset(
-                ImageCore().applyForLeave2,
-                height: 46.h,
-                width: 27.w,
-              ),
-              Image.asset(
-                ImageCore().applyForLeave1,
-                height: 96.h,
-                width: 49.w,
-              ),
-              Image.asset(
-                ImageCore().applyForLeave3,
-                height: 74.h,
-                width: 38.w,
-              ),
-            ],
-          ),
-        ],
+      child: IntrinsicHeight(
+        child: Column(
+          children: [
+            Text(
+              'Apply For Leave',
+              style: bodyLarge(context)?.copyWith(
+                  color: primeColorDark(context),
+                  fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
+            ),
+            const Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Image.asset(
+                  ImageCore().applyForLeave2,
+                  height: 46.h,
+                  width: 27.w,
+                ),
+                Image.asset(
+                  ImageCore().applyForLeave1,
+                  height: 96.h,
+                  width: 49.w,
+                ),
+                Image.asset(
+                  ImageCore().applyForLeave3,
+                  height: 74.h,
+                  width: 38.w,
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
