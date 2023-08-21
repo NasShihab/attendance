@@ -15,13 +15,6 @@ ThemeData lightThemeData() {
     focusColor: Colors.white,
 
     textTheme: TextTheme(
-      //display
-      displayLarge: TextStyle(
-          fontSize: 50.sp, fontWeight: FontWeight.bold, color: Colors.black),
-      displayMedium: TextStyle(
-          fontSize: 40.sp, fontWeight: FontWeight.bold, color: Colors.black),
-      displaySmall: TextStyle(
-          fontSize: 30.sp, fontWeight: FontWeight.bold, color: Colors.black),
       //body
       bodyLarge: TextStyle(fontSize: 20.sp),
       bodyMedium: TextStyle(fontSize: 18.sp, color: Colors.grey[900]),
@@ -30,6 +23,13 @@ ThemeData lightThemeData() {
       titleLarge: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
       titleMedium: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
       titleSmall: TextStyle(fontSize: 20.sp),
+      //display
+      displayLarge: TextStyle(
+          fontSize: 50.sp, fontWeight: FontWeight.bold, color: Colors.black),
+      displayMedium: TextStyle(
+          fontSize: 40.sp, fontWeight: FontWeight.bold, color: Colors.black),
+      displaySmall: TextStyle(
+          fontSize: 30.sp, fontWeight: FontWeight.bold, color: Colors.black),
     ),
     //
     iconTheme: IconThemeData(color: Colors.red, size: 24.sp),
@@ -78,12 +78,7 @@ ThemeData darkThemeData() => ThemeData(
       focusColor: Colors.black,
 
       textTheme: TextTheme(
-        displayLarge: TextStyle(
-            fontSize: 50.sp, fontWeight: FontWeight.bold, color: Colors.white),
-        displayMedium: TextStyle(
-            fontSize: 40.sp, fontWeight: FontWeight.bold, color: Colors.white),
-        displaySmall: TextStyle(
-            fontSize: 30.sp, fontWeight: FontWeight.bold, color: Colors.white),
+        //body
         bodyLarge: TextStyle(fontSize: 20.sp),
         bodyMedium: TextStyle(fontSize: 18.sp),
         bodySmall: TextStyle(fontSize: 16.sp),
@@ -91,6 +86,13 @@ ThemeData darkThemeData() => ThemeData(
         titleLarge: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
         titleMedium: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
         titleSmall: GoogleFonts.roboto(fontSize: 20.sp),
+        // display
+        displayLarge: TextStyle(
+            fontSize: 50.sp, fontWeight: FontWeight.bold, color: Colors.white),
+        displayMedium: TextStyle(
+            fontSize: 40.sp, fontWeight: FontWeight.bold, color: Colors.white),
+        displaySmall: TextStyle(
+            fontSize: 30.sp, fontWeight: FontWeight.bold, color: Colors.white),
       ),
       //
       iconTheme: IconThemeData(color: Colors.red, size: 24.sp),

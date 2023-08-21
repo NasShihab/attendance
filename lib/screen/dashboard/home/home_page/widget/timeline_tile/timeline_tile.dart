@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:timeline_tile/timeline_tile.dart';
-
-import '../../../../../core/color/custom_colors.dart';
+import '../../../../../../core/color/custom_colors.dart';
 import '../../home_page.dart';
 
 class MyTimeLineTile extends StatelessWidget {
@@ -12,7 +11,7 @@ class MyTimeLineTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 213.h,
+      // height: 213.h,
       width: 154.w,
       padding: EdgeInsets.all(5.r),
       decoration: BoxDecoration(
@@ -20,61 +19,63 @@ class MyTimeLineTile extends StatelessWidget {
             0xffBCE8D3,
           ),
           borderRadius: BorderRadius.circular(15.r)),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Text(
-            'TODAY’s ACTIVITY',
-            style: GoogleFonts.openSans(
-              fontSize: 13.sp,
-              fontWeight: FontWeight.bold,
-              color: primeColorDark(context),
+      child: IntrinsicHeight(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Text(
+              'TODAY’s ACTIVITY',
+              style: GoogleFonts.openSans(
+                fontSize: 13.sp,
+                fontWeight: FontWeight.bold,
+                color: primeColorDark(context),
+              ),
+              textAlign: TextAlign.center,
             ),
-            textAlign: TextAlign.center,
-          ),
-          myTimeLineTile(
-            context,
-            isFirst: true,
-            isLast: false,
-            isChecked: true,
-            endChildText: 'Check IN',
-          ),
-          myTimeLineTile(
-            context,
-            isFirst: false,
-            isLast: false,
-            isChecked: true,
-            endChildText: 'BREAK TIME START',
-          ),
-          myTimeLineTile(
-            context,
-            isFirst: false,
-            isLast: false,
-            isChecked: true,
-            endChildText: 'BREAK TIME DONE',
-          ),
-          myTimeLineTile(
-            context,
-            isFirst: false,
-            isLast: false,
-            isChecked: true,
-            endChildText: 'LUNCH START',
-          ),
-          myTimeLineTile(
-            context,
-            isFirst: false,
-            isLast: false,
-            isChecked: false,
-            endChildText: 'LUNCH DONE',
-          ),
-          myTimeLineTile(
-            context,
-            isFirst: false,
-            isLast: true,
-            isChecked: false,
-            endChildText: 'CHECK OUT',
-          ),
-        ],
+            myTimeLineTile(
+              context,
+              isFirst: true,
+              isLast: false,
+              isChecked: true,
+              endChildText: 'Check IN',
+            ),
+            myTimeLineTile(
+              context,
+              isFirst: false,
+              isLast: false,
+              isChecked: true,
+              endChildText: 'BREAK TIME START',
+            ),
+            myTimeLineTile(
+              context,
+              isFirst: false,
+              isLast: false,
+              isChecked: true,
+              endChildText: 'BREAK TIME DONE',
+            ),
+            myTimeLineTile(
+              context,
+              isFirst: false,
+              isLast: false,
+              isChecked: true,
+              endChildText: 'LUNCH START',
+            ),
+            myTimeLineTile(
+              context,
+              isFirst: false,
+              isLast: false,
+              isChecked: false,
+              endChildText: 'LUNCH DONE',
+            ),
+            myTimeLineTile(
+              context,
+              isFirst: false,
+              isLast: true,
+              isChecked: false,
+              endChildText: 'CHECK OUT',
+            ),
+          ],
+        ),
       ),
     );
   }

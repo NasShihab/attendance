@@ -2,12 +2,12 @@ import 'package:attendance/core/color/custom_colors.dart';
 import 'package:attendance/core/height_weight_spacing.dart';
 import 'package:attendance/core/image_asset/image_files.dart';
 import 'package:attendance/core/theme_data/text_theme.dart';
-import 'package:attendance/screen/dashboard/home/card_widget/apply_for_leave.dart';
-import 'package:attendance/screen/dashboard/home/card_widget/attendance_trends.dart';
-import 'package:attendance/screen/dashboard/home/card_widget/current_month_attendance.dart';
-import 'package:attendance/screen/dashboard/home/card_widget/productivity_and_overtime.dart';
-import 'package:attendance/screen/dashboard/home/widget/reminders/reminders_bar.dart';
-import 'package:attendance/screen/dashboard/home/widget/time_and_status_bar/time_and_status_bar.dart';
+import 'package:attendance/screen/dashboard/home/home_page/card_widget/apply_for_leave.dart';
+import 'package:attendance/screen/dashboard/home/home_page/card_widget/attendance_trends.dart';
+import 'package:attendance/screen/dashboard/home/home_page/card_widget/current_month_attendance.dart';
+import 'package:attendance/screen/dashboard/home/home_page/card_widget/productivity_and_overtime.dart';
+import 'package:attendance/screen/dashboard/home/home_page/widget/reminders/reminders_bar.dart';
+import 'package:attendance/screen/dashboard/home/home_page/widget/time_and_status_bar/time_and_status_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: 20.w,
+            horizontal: 15.w,
           ),
           child: ListView(
             children: [

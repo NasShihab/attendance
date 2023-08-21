@@ -1,10 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../core/color/custom_colors.dart';
-import '../../../../../core/height_weight_spacing.dart';
-import '../../../../../core/image_asset/image_files.dart';
-import '../../../../../core/theme_data/text_theme.dart';
+import '../../../../../../core/color/custom_colors.dart';
+import '../../../../../../core/height_weight_spacing.dart';
+import '../../../../../../core/image_asset/image_files.dart';
+import '../../../../../../core/theme_data/text_theme.dart';
 import '../timeline_tile/timeline_tile.dart';
 
 class ReminderBar extends StatelessWidget {
@@ -98,7 +99,42 @@ class ReminderBar extends StatelessWidget {
                     ),
                   ),
                 ),
-                Text('Performance Check', style: bodyMedium(context),)
+                height15(),
+                Text(
+                  'Performance Check',
+                  style: bodySmall(context)
+                      ?.copyWith(fontSize: 13.sp, fontWeight: FontWeight.w500),
+                ),
+                height15(),
+                Container(
+                  height: 57.h,
+                  width: 232.w,
+                  padding: EdgeInsets.symmetric(horizontal: 10.w
+                  ),
+                  decoration: BoxDecoration(
+                      color: const Color(
+                        0xffe7c6ff,
+                      ),
+                      borderRadius: BorderRadius.circular(15.r)),
+                  child: Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 20.r,
+                        child: Icon(CupertinoIcons.hand_thumbsup, size: 20.sp,),
+                      ),
+                      width10(),
+                      Expanded(
+                        child: Text(
+                          "Great job, Barton! Your attendance percentage for the current month is "
+                          "95%,putting you in the top 10%of the team.Keep up the good work!",
+                          style: bodySmall(context)?.copyWith(fontSize: 7.sp, fontWeight: FontWeight.w500),
+                          maxLines: 3,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
             const Spacer(),

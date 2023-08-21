@@ -1,4 +1,4 @@
-import 'package:attendance/screen/dashboard/home/home_page.dart';
+import 'package:attendance/screen/dashboard/home/home_page/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';

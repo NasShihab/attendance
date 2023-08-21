@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../core/color/custom_colors.dart';
-import '../../../../../core/theme_data/text_theme.dart';
+import '../../../../../../core/color/custom_colors.dart';
+import '../../../../../../core/theme_data/text_theme.dart';
 
 class TimeAndStatusBar extends StatelessWidget {
   const TimeAndStatusBar({super.key});
