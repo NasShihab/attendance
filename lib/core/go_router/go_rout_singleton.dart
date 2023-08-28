@@ -6,6 +6,8 @@ import 'package:attendance/screen/on_boarding/splash_screen/welcome_page.dart';
 import 'package:attendance/screen/auth/login/login_page.dart';
 import 'package:attendance/screen/on_boarding/splash_screen/splash_screen.dart';
 
+import '../../screen/dashboard/home/leaves/new_leaves.dart';
+
 class GoRoutSingleton {
   static final GoRoutSingleton _singleton = GoRoutSingleton._internal();
 
@@ -23,4 +25,5 @@ class GoRoutSingleton {
   String? signUpConfirmation =
       const SignUpConfirmation().runtimeType.toString();
   String? homePage = const HomePage().runtimeType.toString();
+  String? newLeave = const  NewLeave().runtimeType.toString();
 }

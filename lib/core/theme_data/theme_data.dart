@@ -52,7 +52,6 @@ ThemeData lightThemeData() {
       titleTextStyle: TextStyle(
         color: Colors.black,
         fontSize: 24.sp,
-        fontWeight: FontWeight.bold,
       ),
       iconTheme: IconThemeData(
         color: Colors.red,
@@ -114,7 +113,6 @@ ThemeData darkThemeData() => ThemeData(
         titleTextStyle: TextStyle(
           color: Colors.black,
           fontSize: 24.sp,
-          fontWeight: FontWeight.bold,
         ),
         iconTheme: IconThemeData(
           color: Colors.red,
